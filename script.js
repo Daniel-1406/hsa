@@ -1,15 +1,15 @@
 
-document.onreadystatechange = function () {
-    if (document.readyState !== "complete") {
-        $("#body").addClass("d-none").removeClass("d-block");
-        $(".loader-wrapper").addClass("d-flex").removeClass("d-none");
-    } else {
-        setTimeout(function(){
-            $(".loader-wrapper").addClass("d-none").removeClass("d-flex");
-        }, 1000);
-        $("#body").addClass("d-block").removeClass("d-none");
-    }
-};
+// document.onreadystatechange = function () {
+//     if (document.readyState !== "complete") {
+//         $("#body").addClass("d-none").removeClass("d-block");
+//         $(".loader-wrapper").addClass("d-flex").removeClass("d-none");
+//     } else {
+//         setTimeout(function(){
+//             $(".loader-wrapper").addClass("d-none").removeClass("d-flex");
+//         }, 1000);
+//         $("#body").addClass("d-block").removeClass("d-none");
+//     }
+// };
 
  //jquery
  $(document).ready(function(){
