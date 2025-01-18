@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Spring Assembly</title>
+    <link href="img/rccg_logo.png" rel="icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style type="text/css">
+        .card, .card-img-top{
+            transition: transform .2s;
+        }
+        
+        .card-img{
+            transition: transform .2s;
+            opacity: 0.5;
+        }
+        /* Styling for the moving div */
+        .location-icon {
+        position:relative;
+        animation: moveUpDown 0.5s ease-in-out infinite alternate;
+        }
+        .insta-icon {
+        position:relative;
+        animation: moveUpDown 0.8s ease-in-out infinite alternate;
+        }
+        .youtube-icon {
+        position:relative;
+        animation: moveUpDown 0.8s ease-in-out infinite alternate;
+        }
+        .fb-icon {
+        position:relative;
+        animation: moveUpDown 0.8s ease-in-out infinite alternate;
+        }
+        .wa-icon {
+        position:relative;
+        animation: moveUpDown 0.8s ease-in-out infinite alternate;
+        }
+
+        /* Keyframes animation for up-down movement */
+        @keyframes moveUpDown {
+            0% {
+                top: 0px;
+            }
+            100% {
+                top: 8px;
+            }
+        }
+        
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <div class="loader-wrapper position-fixed d-flex justify-content-center align-items-center w-100 h-100">
+        <div class="h-100 w-50 d-flex justify-content-around align-items-center row">
+            <div class="col-lg-12 col-12 p-2 spinner-grow text-danger"></div>
+            <div class="col-lg-12 col-12 p-2 spinner-grow text-primary"></div>
+            <div class="col-12 p-2 spinner-grow text-success"></div>
+            <div class="col-12 p-2 spinner-grow text-info"></div>
+            <div class="col-12 p-2 spinner-grow text-warning"></div>
+        </div>
+       
+    </div>
+
+    <div id="body" class="container-fluid p-0 m-0 border-warning border-3 d-none">
+        <!-- navbar start-->
+        <div class=" fixed-top navbar m-0 d-none d-lg-flex justify-content-between align-items-center pb-0 pt-0 ps-5 pe-0">
+            <div class="m-0 navbar-brand fw-bold fs-2 p-0 " style="text-shadow: 2px 2px 4px #000000">
+            <img src="img/rccg_logo.png" alt="" class="img-fluid " width="100px" height="50px">
+            Healing 
+            Spring 
+            Assembly
+            </div>
+            
+            <nav id="scroll" class="">
+                <ul class="nav fw-bold fs-5 m-0" style="text-shadow: 2px 2px 4px #000000">
+                        <li class="nav-item  ">
+                            <a class="nav-link text-light active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light d-xl-block" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light d-xl-block" href="#programs">Schedules</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light d-xl-block" href="#connect">Connect Groups</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#contact">Contact</a>
+                        </li>
+                        
+                </ul>
+            </nav>
+            
+            
+        </div>
+        <div  id="scroll" class="shadow fixed-top navbar m-0 d-block d-lg-none d-md-block justify-content-between align-items-center pb-0 pt-0 pe-0 ">
+            <div class="d-flex justify-content-between p-2 pe-4">
+                <div class="m-0 navbar-brand fw-bold fs-2 p-0 ps-2 " style="text-shadow: 2px 2px 4px #000000">
+                    <img src="img/rccg_logo.png" alt="" class="img-fluid " width="100px" height="20px">
+                        HSA
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="bi bi-card-list text-light fs-1 fw-bold"></i>
+                    </button>
+            </div>
+            
+            <div id="collapsibleNavbar" class="collapse navbar-collapse">
+                <ul class="nav fw-bold fs-5 m-0 w-100 d-flex flex-column" style="text-shadow: 2px 2px 4px #000000">
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light d-xl-block" href="#about">About</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light d-xl-block" href="#programs">Schedules</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light d-xl-block" href="#services">Connect Groups</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-light" href="#skills">Contact</a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+            <!-- navbar end-->
+             <!-- hero start-->
+            <div class="container-fluid p-0 position-relative" id="home">
+                <div class="container-fluid" style="background-image: url(img/hero_img1.jpg);
+                                                                        background-repeat:no-repeat ;
+                                                                        background-attachment:fixed;
+                                                                        background-size:100% 100%;
+                                                                        height:600px;
+                                                                        opacity:0.1;
+                                                                        ">
+                                                                        
+                </div>
+                <div class=" text-light w-100 position-absolute m-0 text-center" style="top:35%; text-shadow: 2px 2px 4px #000000">
+                    <div class=" row d-flex justify-content-center">
+                        <div class="col-lg-5 col-md-3 col-8 d-flex justify-content-around px-3 ps-0 mb-2 fw-bold">
+                            <!-- <a href="#" class=""><i class="bi bi-twitter fs-3 " style="color: #1DA1F2;"></i></a> -->
+                            <a href="#" class=""><i class="insta-icon bi bi-instagram fs-3" style="color:  #d62976;"></i></a>
+                            <a href="#" class=" "><i class="youtube-icon bi bi-youtube fs-3" style="color: #CD201F;"></i></a>
+                            <a href="#" class=" "><i class="fb-icon bi bi-facebook fs-3" style="color: #316FF6;"></i></a>
+                            <a href="#" class=" "><i class="wa-icon bi bi-whatsapp fs-3" style="color: #075e54;"></i></a>
+                        </div>
+                        <p class="text-light mb-4 fw-bold position-relative"><i id="location-icon" class="bi bi-geo-alt-fill location-icon text-danger fs-2 fw-bold"></i>  Redeemer's Health Center, Redemption City, Mowe, Ogun State, Nigeria</p>
+                            <p id="welcome-message" class=" mb-3 fs-1 fw-bold" style="height:60px; max-height:60px;"> </p>
+                        <div class="button-group row px-3 py-0">
+                            <div class="col-6 p-3">
+                                <a href="#map" type="button" style="text-shadow: 0px 0px 0px #000000" class="h-100 btn btn-lg rounded-0 border-2 py-3 px-4 btn-outline-light">Plan A Visit</a>
+                            </div>
+                            <div class="col-6 p-3 px-0">
+                                <a href="#contact-form" type="button" style="text-shadow: 0px 0px 0px #000000" class="h-100 btn btn-lg rounded-0 border-2 py-3 px-4 btn-outline-info">New Here?</a>
+                            </div>
+                        </div>     
+
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- hero end-->
+            <!-- about start-->
+             <div id="about" class="container-fluid p-0 m-0">
+                    <div class="row py-5 px-4">
+                        <div class="col-lg-6 px-4 py-5 ">
+                            <img src="img/hero_img2.jpg" alt="" class="location-icon img-fluid" style="height:350px; width:100%; border-radius:0px 70px 70px 120px;"  data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500">
+                        </div>
+                        <div class="col-lg-6 px-4 py-5 m-0">
+                            <div class="h-100">
+                                <h1 class="fw-bold mb-5" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500">Welcome</h1> 
+                                <p class="m-0 fs-5 mb-5">
+                                    We are a community of faith where everyone is welcome to experience God's love and grace. 
+                                    Join us for worship, fellowship, and service as we grow together in our journey of
+                                     faith.
+                                     We look forward to seeing you soon!"
+
+                                </p>
+                                <a href="https://www.rccg.org/" type="button" class="btn btn-lg rounded-0 border-2 px-5 py-3 btn-outline-light">RCCG Missions <i class="bi bi-arrow-right"></i></a>
+
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
+             </div>
+            <!-- about end-->
+            <!-- programs start-->
+             <div id="programs" class="container-fluid p-0 m-0 px-1 mb-4" style="text-shadow: 2px 2px 4px #000000">
+                <h1 class="text-center fw-bold p-2 mb-4 pb-4">Our Schedules  <i class="bi bi-calendar-fill"></i></h1>
+                <div class="row py-3 px-1 g-4">
+                        <div class="col-6 col-lg-4">
+                            <div class="card bg-dark shadow program overflow-hidden" data-aos="flip-down" data-aos-delay="100" data-aos-duration="1500">
+                                <img class="card-img-top" src="img/sunday_service.jpg" height="250px" alt="Card image cap">
+                                <div class="card-body text-center overflow-hidden z-2">
+                                    <p class="card-text fs-2 fw-bold">Sunday Service</p>
+                                    <p class="card-text fs-5"><i class="bi bi-clock-fill"></i>     9:00am - 11:00am</p>
+                                    <p class="card-text fw-bold text-secondary"><i class="bi bi-calendar-fill"></i>  Sundays</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card bg-dark shadow program overflow-hidden">
+                                <img class="card-img-top" src="img/sunday_school.jpg" height="250px" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <p class="card-text fs-2 fw-bold">Sunday School</p>
+                                    <p class="card-text fs-5"><i class="bi bi-clock-fill"></i>     8:00am - 9:00am</p>
+                                    <p class="card-text fw-bold text-secondary"><i class="bi bi-calendar-fill"></i>  Sundays</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card bg-dark shadow program overflow-hidden">
+                                <img class="card-img-top" src="img/biblestudy.jpg" height="250px" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <p class="card-text fs-2 fw-bold">Digging Deep</p>
+                                    <p class="card-text fs-5"><i class="bi bi-clock-fill"></i>     5:00pm - 6:00pm</p>
+                                    <p class="card-text fw-bold text-secondary"><i class="bi bi-calendar-fill"></i>  Tuesdays</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card bg-dark shadow program overflow-hidden">
+                                <img class="card-img-top" src="img/prayer.jpg" height="250px" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <p class="card-text fs-2 fw-bold">Faith Clinic</p>
+                                    <p class="card-text fs-5"><i class="bi bi-clock-fill"></i>     5:00pm - 6:00pm</p>
+                                    <p class="card-text fw-bold text-secondary"><i class="bi bi-calendar-fill"></i>  Thursdays</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card bg-dark shadow program overflow-hidden">
+                                <img class="card-img-top" src="img/thanksgiving_img.jpg" height="250px" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <p class="card-text fs-2 fw-bold">Thanksgiving Sunday</p>
+                                    <p class="card-text fs-5"><i class="bi bi-clock-fill"></i>     9:00am - 11:00am</p>
+                                    <p class="card-text fw-bold text-secondary"><i class="bi bi-calendar-fill"></i>  First Sunday Of The Month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card bg-dark shadow program overflow-hidden">
+                                <img class="card-img-top" src="img/youthsunday.jpg" height="250px" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <p class="card-text fs-2 fw-bold">Youth Sunday</p>
+                                    <p class="card-text fs-5"><i class="bi bi-clock-fill"></i>     9:00am - 11:00am</p>
+                                    <p class="card-text fw-bold text-secondary"><i class="bi bi-calendar-fill"></i>  Third Sunday Of The Month</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+             </div>
+            <!-- programs end-->
+            <!-- connect start-->
+             <div id="connect" class="container-fluid m-0 py-5 px-1 bg-light">
+                <h1 class="fw-bold p-2 mb-4 pb-3 pt-5 text-dark text-center">Connect Groups<i class="bi bi-people-fill"></i></h1>
+                <div class="row g-4"  style="text-shadow: 2px 2px 4px #000000">
+                    <div class="col-6 col-lg-4">
+                        <div  class="card p-0 m-0 border-0 shadow bg-secondary connect" style="border-radius:20px;">
+                            <img id="card-img" src="img/men_img.jpg" class="card-img" style=" height:300px;border-radius:20px;" alt="">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-title text-center fw-bold fs-3">Excellent Men</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="card p-0 m-0 border-0 shadow bg-secondary connect" style="border-radius:20px;">
+                            <img src="img/good_women.jpg" class="card-img" style=" height:300px;border-radius:20px;" alt="">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-title text-center fw-bold fs-3">Good Women</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="card p-0 m-0 border-0 shadow bg-secondary connect" style="border-radius:20px;">
+                            <img src="img/yaya.jpg" class="card-img" style=" height:300px;border-radius:20px;" alt="">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-title text-center fw-bold fs-3">Youth and Young Adults (YAYA)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="card p-0 m-0 border-0 shadow bg-secondary connect" style="border-radius:20px;">
+                            <img src="img/teens.jpg" class="card-img" style=" height:300px;border-radius:20px;" alt="">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-title text-center fw-bold fs-3">Teens</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="card p-0 m-0 border-0 shadow bg-secondary connect" style="border-radius:20px;">
+                            <img src="img/children.jpeg" class="card-img" style=" height:300px;border-radius:20px;" alt="">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-title text-center fw-bold fs-3">Children</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="card p-0 m-0 border-0 shadow bg-secondary connect" style="border-radius:20px;">
+                            <img src="img/toddlers1.jpg" class="card-img" style=" height:300px;border-radius:20px;" alt="">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                                <div class="card-title text-center fw-bold fs-3">Toddlers</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+             </div>
+            <!-- connect end-->
+            <!-- contact start-->
+             <div id="" class="container-fluid m-0 p-0 px-1" style="text-shadow: 2px 2px 4px #000000">
+                <div class="row g-4 p-3 m-0">
+                    <h1 class="text-center fw-bold">Contact Us</h1>
+                    <div class="col-lg-6 row m-0 p-3 g-5 ">
+                        <div class="col-lg-6 p-2">
+                            <div class="location-icon border border-info shadow p-2 h-100" style="border-radius:40px;">
+                                <div class="text-center p-3 text-info"><i class="fs-1 bi bi-globe"></i></div>
+                                <div class="fs-4 text-center p-2 fw-bold">Continental</div>
+                                <div class=" overflow-hidden"><p class="fw-bold text-center text-info d-block">Province</p></div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-lg-6 p-2">
+                            <div class="insta-icon border border-success shadow p-2 h-100" style="border-radius:40px;">
+                                <div class="text-center p-3 text-success"><i class="fs-1 bi bi-graph-up"></i></div>
+                                <div class="fs-4 text-center p-2 fw-bold">Praise and Power</div>
+                                <div class=" overflow-hidden"><p class="fw-bold text-center text-success d-block">Zone</p></div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-6 p-2">
+                            <div class="fb-icon border border-warning shadow p-2 h-100" style="border-radius:40px;">
+                                <div class="text-center p-3 text-warning"><i class="fs-1 bi bi-grid-fill"></i></div>
+                                <div class="fs-4 text-center p-2 fw-bold">Redeemer's House</div>
+                                <div class=" overflow-hidden"><p class="fw-bold text-center text-warning d-block">Area</p></div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-6 p-2">
+                            <div class="location-icon border border-danger shadow p-2 h-100" style="border-radius:40px;">
+                                <div class="text-center p-3 text-danger"><i class="fs-1 bi bi-geo-alt"></i></div>
+                                <div class="fs-4 text-center p-2 fw-bold">Healing Spring Assembly</div>
+                                <div class=" overflow-hidden"><p class="fw-bold text-center text-danger d-block">Parish</p></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+
+
+
+                   
+                    <div id="contact" class="col-lg-6 p-2">
+                        <div id="contact-form">
+                            <form action="https://formspree.io/f/xkgglnyb" method="POST" class="shadow border border-dark p-3" style="border-radius:25px;">
+                                <h2 class=" p-3 text-center">Reach Out To Us</h2>
+                                <div class="mb-4 mt-3">
+                                  <label for="name" class="form-label mb-2 ps-2 fw-bold">Full Name</label>
+                                  <input type="text" required class="form-control text-light rounded-0 bg-dark border-2 border-end-0 border-start-0 border-top-0 border-bottom" id="name" placeholder="Enter Full Name" name="name">
+                                </div>
+                                <div class="mb-4 mt-3">
+                                    <label for="email" class="form-label mb-2 ps-2 fw-bold">Email</label>
+                                    <input type="email" required class="form-control text-light rounded-0 bg-dark border-2 border-end-0 border-start-0 border-top-0 border-bottom" id="email" placeholder="Enter Email" name="email">
+                                </div>
+                                <div class="mb-4 mt-3">
+                                    <label for="subject" class="form-label mb-2 ps-2 fw-bold">Subject</label>
+                                    <input type="text" required class="form-control text-light rounded-0 bg-dark border-2 border-end-0 border-start-0 border-top-0 border-bottom" id="subject" placeholder="Enter Subject" name="subject">
+                                </div>
+                                <div class="mb-4 mt-3">
+                                    <label for="message" class="form-label mb-2 ps-2 fw-bold">Message</label>
+                                    <textarea required class="form-control text-light rounded-0 bg-dark border-2 border-end-0 border-start-0 border-top-0 border-bottom" name="message" id="message">Enter Message</textarea>
+                                </div>
+                                
+                                <div class="text-end">
+                                    <button type="submit" class="btn btn-lg rounded-0 border-2 px-5 py-3 btn-outline-light">Send <i class="bi bi-arrow-right"></i></button>
+                                </div>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="map" class=" py-5 px-3 mb-1 pb-3 text-center">
+                    <p class="fs-1 fw-bold">Locate Us </p>
+
+                </div>
+                <div class="row py-2 px-5">
+                    <iframe class="border rounded p-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.6198537755013!2d3.4512563736520154!3d6.816005519697915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bc0d1435aef81%3A0xacb549bdb6822e3b!2sRedeemer&#39;s%20Health%20Centre!5e0!3m2!1sen!2sng!4v1736993114496!5m2!1sen!2sng" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+             </div>
+            <!-- contact end-->
+            <!-- footer start-->
+            <footer class="container-fluid text-center py-5 fw-bold shadow-top" style="text-shadow: 2px 2px 4px #000000">
+                <div class=" row px-5 d-flex justify-content-around">
+                   <div class="col-lg-5 col-md-3 col-8 d-flex justify-content-around p-3 ps-0 mb-2 fw-bold">
+                            <!-- <a href="#" class=""><i class="bi bi-twitter fs-3 " style="color: #1DA1F2;"></i></a> -->
+                            <a href="#" class=""><i class="insta-icon bi bi-instagram fs-3" style="color:  #d62976;"></i></a>
+                            <a href="#" class=" "><i class="youtube-icon bi bi-youtube fs-3" style="color: #CD201F;"></i></a>
+                            <a href="#" class=" "><i class="fb-icon bi bi-facebook fs-3" style="color: #316FF6;"></i></a>
+                            <a href="#" class=" "><i class="wa-icon bi bi-whatsapp fs-3" style="color: #075e54;"></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-lg-6">
+                        <p class="text-light mb-4 fw-bold position-relative"><i id="location-icon" class="bi bi-telephone-fill location-icon text-primary fs-2 fw-bold"></i><br>+234 704 3635 134, +234 808 4069 410</p>
+
+                    </div>
+                    <div class="col-6 col-lg-6">
+                        <p class="text-light mb-4 fw-bold position-relative"><i id="location-icon" class="bi bi-geo-alt-fill location-icon text-danger fs-2 fw-bold"></i><br>Redeemer's Health Center, Redemption City, Mowe, Ogun State, Nigeria</p>
+
+                    </div>
+                </div>
+                <div class="fs-5">Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  Healing Spring Assembly</div>
+
+                <div class="text-center text-secondary"> 
+                  Designed and Developed by <a href="https://devdnl.vercel.app/">Dev DnL</a>
+                </div>
+            </footer>
+            <!-- footer end-->
+
+            
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+   
+    
+   
+    
+    
+    
+</body>
+</html>
