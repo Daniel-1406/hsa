@@ -427,7 +427,32 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <script>
+                
+ //jquery
+ $(document).ready(function(){
+     $(".connect").mouseenter(function(){
+        $(this).css({"transform": "scale(1.1)","z-index":"1"});
+        $(this).find(".card-img").css({"opacity":"1"});
+     });
+     $(".connect").mouseleave(function(){
+        $(this).css({"transform": "scale(1)","z-index":"0"});
+        $(this).find(".card-img").css({"opacity":"0.5"});
+     });
+
+     $(".program").mouseenter(function(){
+        $(this).find(".card-img-top").css({"transform": "scale(1.1)","transform-origin":"40% 20%","overflow":"hidden"});
+     });
+     $(".program").mouseleave(function(){
+        $(this).find(".card-img-top").css({"transform": "scale(1)"});
+     });
+ });
+
+ var typed = new Typed('#welcome-message', {
+    strings: ['Find Solace and Refreshment For Your Soul.','Welcome To Healing Spring Assembly.'],
+    typeSpeed: 100,
+  });
+    </script>
    
     
    
